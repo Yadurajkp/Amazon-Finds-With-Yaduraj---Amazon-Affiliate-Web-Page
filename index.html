@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Amazon Finds by Yaduraj</title>
+  <style>
+    :root{
+      --dark-bg: #232f3e;
+      --panel-bg: #1f2a36;
+      --tile-bg: rgba(255,255,255,0.88);
+      --accent: #ff9900;
+      --tile-radius: 12px;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--dark-bg);
+      color: #fff;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* 🔹 Header with large logo, title, and affiliate info */
+    header{
+      padding:18px 20px;
+      background: #131921;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    header img.logo{
+      height: 100px; /* 🔸 Enlarged logo significantly */
+      cursor: pointer;
+    }
+
+    header h1{
+      margin:0;
+      font-size:26px;
+      color: var(--accent);
+      letter-spacing:1px;
+      text-transform: uppercase;
+      text-align: center;
+      flex: 1;
+    }
+
+    /* 🔹 Affiliate Info (top-right like Amazon) */
+    .affiliate-top {
+      color: #fff;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 500;
+    }
+
+    .affiliate-top img.flag {
+      height: 16px;
+      width: auto;
+    }
+
+    /* 🔍 Search Bar Styles */
+    .search-container {
+      margin: 24px auto 0 auto;
+      text-align: center;
+      width: 100%;
+    }
+
+    .search-container input {
+      width: 90%;
+      max-width: 1040px;
+      padding: 10px 18px;
+      border: 2px solid #ccc;
+      border-radius: 12px;
+      outline: none;
+      font-size: 1rem;
+      background: #fff;
+      color: #000;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .search-container input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 8px var(--accent);
+    }
+
+    .page-center{
+      display:flex;
+      justify-content:center;
+      padding:36px 16px;
+      box-sizing:border-box;
+    }
+
+    .panel{
+      width:100%;
+      max-width:1100px;
+      background: var(--panel-bg);
+      border-radius:18px;
+      padding:28px;
+      box-sizing:border-box;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    }
+
+    .cards-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:22px;
+      justify-content:center;
+      align-items:flex-start;
+      padding:10px 6px;
+    }
+
+    .card{
+      background: var(--tile-bg);
+      border-radius: var(--tile-radius);
+      padding:14px;
+      width:220px;
+      min-height:250px;
+      box-sizing:border-box;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:flex-start;
+      transition: transform .18s ease, box-shadow .18s ease;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .card:hover{
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    }
+
+    .card img{
+      width:150px;
+      height:auto;
+      border-radius:8px;
+      background:#fff;
+      padding:6px;
+      display:block;
+      margin-bottom:14px;
+    }
+
+    .card h3{
+      color:#000;
+      font-size:15px;
+      text-align:center;
+      margin:0 0 12px 0;
+      line-height:1.2;
+      min-height:40px;
+      font-weight:600;
+      width:100%;
+    }
+
+    .card a.btn{
+      margin-top:auto;
+      display:inline-block;
+      width:100%;
+      text-align:center;
+      padding:7px 10px;
+      border-radius:8px;
+      background: var(--accent);
+      color:#000;
+      font-weight:600;
+      font-size:14px;
+      text-decoration:none;
+      box-shadow: 0 2px 0 rgba(0,0,0,0.08) inset;
+      transition: background .15s ease;
+    }
+
+    .card a.btn:hover{
+      background:#febd69;
+    }
+
+    @media (max-width:760px){
+      header img.logo{ height:70px; }
+      header h1{ font-size:22px; }
+      .affiliate-top{ font-size:13px; }
+    }
+
+    @media (max-width:460px){
+      header{ flex-direction: column; gap: 4px; }
+      header img.logo{ height:60px; }
+      header h1{ font-size:18px; }
+      .affiliate-top{ justify-content: center; }
+    }
+
+    footer{
+      margin-top:18px;
+      color:rgba(255,255,255,0.7);
+      text-align:center;
+      font-size:13px;
+      padding:20px 0 6px 0;
+    }
+
+    .affiliate-info {
+      font-size: 13px;
+      text-align: center;
+      color: #ccc;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- 🛒 Amazon.in logo -->
+    <img src="images/Amazon_Logo.png" alt="Amazon.in Logo" class="logo">
+    <h1>AMAZON FINDS BY YADURAJ</h1>
+
+    <!-- 👤 Affiliate username + Country flag -->
+    <div class="affiliate-top">
+      <span>@knowledgeb05d-21</span>
+      <img src="https://flagcdn.com/w20/in.png" alt="India Flag" class="flag">
+    </div>
+  </header>
+
+  <!-- 🔍 Search Bar -->
+  <div class="search-container">
+    <input type="text" id="searchBar" placeholder="Search product">
+  </div>
+
+  <div class="page-center">
+    <div class="panel">
+      <div class="cards-row" id="productGrid">
+        <!-- Product card 1 -->
+        <div class="card">
+          <img src="images/Soap Dispenser.png" alt="Markwell 3 in 1 Soap Pump Dispenser">
+          <h3>Markwell 3 in 1 Soap Pump Dispenser</h3>
+          <a class="btn" href="https://amzn.to/43bKiby" target="_blank" rel="noopener">Buy on Amazon</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🪙 Affiliate Info -->
+  <div class="affiliate-info">
+    @knowledgeb05d-21 • 🇮🇳 Amazon India Affiliate
+  </div>
+
+  <footer>© 2025 Amazon Finds by Yaduraj • As an Amazon Associate I earn from qualifying purchases.</footer>
+
+  <!-- 🔍 JavaScript for Search -->
+  <script>
+    const searchBar = document.getElementById('searchBar');
+    const cards = document.querySelectorAll('.card');
+
+    searchBar.addEventListener('keyup', (e) => {
+      const term = e.target.value.toLowerCase();
+      cards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        card.style.display = title.includes(term) ? 'flex' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
