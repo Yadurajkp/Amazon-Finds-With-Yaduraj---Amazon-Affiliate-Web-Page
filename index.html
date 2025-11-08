@@ -35,7 +35,7 @@
     }
 
     header img.logo{
-      height: 100px; /* Enlarged logo */
+      height: 130px; /* Enlarged logo more visibly */
       cursor: pointer;
     }
 
@@ -115,12 +115,13 @@
       padding:10px 6px;
     }
 
+    /* ✅ Fixed-size product cards */
     .card{
       background: var(--tile-bg);
       border-radius: var(--tile-radius);
       padding:14px;
-      width:220px;
-      min-height:250px;
+      width:250px;
+      height:360px;
       box-sizing:border-box;
       display:flex;
       flex-direction:column;
@@ -136,12 +137,12 @@
     }
 
     .card img{
-      width:150px;
-      height:auto;
+      width:100%;
+      height:200px;
+      object-fit: cover;
       border-radius:8px;
       background:#fff;
       padding:6px;
-      display:block;
       margin-bottom:14px;
     }
 
@@ -177,14 +178,14 @@
     }
 
     @media (max-width:760px){
-      header img.logo{ height:70px; }
+      header img.logo{ height:80px; }
       header h1{ font-size:22px; }
       .affiliate-top{ font-size:13px; }
     }
 
     @media (max-width:460px){
       header{ flex-direction: column; gap: 4px; }
-      header img.logo{ height:60px; }
+      header img.logo{ height:70px; }
       header h1{ font-size:18px; }
       .affiliate-top{ justify-content: center; }
     }
