@@ -23,7 +23,6 @@
       -moz-osx-font-smoothing:grayscale;
     }
 
-    /* 🔹 Header with large logo, title, and affiliate info */
     header{
       padding:18px 20px;
       background: #131921;
@@ -35,7 +34,7 @@
     }
 
     header img.logo{
-      height: 130px; /* Enlarged logo more visibly */
+      height: 130px;
       cursor: pointer;
     }
 
@@ -49,7 +48,6 @@
       flex: 1;
     }
 
-    /* 🔹 Affiliate Info (top-right like Amazon) */
     .affiliate-top {
       color: #fff;
       font-size: 15px;
@@ -64,7 +62,6 @@
       width: auto;
     }
 
-    /* 🔍 Search Bar Styles */
     .search-container {
       margin: 24px auto 0 auto;
       text-align: center;
@@ -115,7 +112,6 @@
       padding:10px 6px;
     }
 
-    /* ✅ Fixed-size product cards */
     .card{
       background: var(--tile-bg);
       border-radius: var(--tile-radius);
@@ -208,18 +204,15 @@
 </head>
 <body>
   <header>
-    <!-- 🛒 Amazon.in logo -->
     <img src="images/Amazon_Logo.png" alt="Amazon.in Logo" class="logo">
     <h1>AMAZON FINDS BY YADURAJ</h1>
 
-    <!-- 👤 Affiliate username + Country flag -->
     <div class="affiliate-top">
       <span>@knowledgeb05d-21</span>
       <img src="https://flagcdn.com/w20/in.png" alt="India Flag" class="flag">
     </div>
   </header>
 
-  <!-- 🔍 Search Bar -->
   <div class="search-container">
     <input type="text" id="searchBar" placeholder="Search product">
   </div>
@@ -227,31 +220,36 @@
   <div class="page-center">
     <div class="panel">
       <div class="cards-row" id="productGrid">
-        <!-- Product card 1 -->
+
         <div class="card">
           <img src="images/Soap Dispenser.png" alt="Markwell 3 in 1 Soap Pump Dispenser">
           <h3>Markwell 3 in 1 Soap Pump Dispenser</h3>
           <a class="btn" href="https://amzn.to/43bKiby" target="_blank" rel="noopener">Buy on Amazon</a>
         </div>
 
-        <!-- Product card 2 -->
         <div class="card">
           <img src="images/Amazon_galaxy_a55.jpg" alt="Samsung Galaxy A55 5G">
           <h3>Samsung Galaxy A55 5G</h3>
           <a class="btn" href="https://amzn.to/4nDKdVn" target="_blank" rel="noopener">Buy on Amazon</a>
         </div>
+
+        <!-- 🆕 New Product Card -->
+        <div class="card">
+          <img src="images/Mikanix_Chain_Cleaner.jpg" alt="MIKANIX Chain Cleaner & Lubricant Kit">
+          <h3>MIKANIX Chain Cleaner & Lubricant Kit with Brush</h3>
+          <a class="btn" href="https://amzn.to/3WQckWC" target="_blank" rel="noopener">Buy on Amazon</a>
+        </div>
+
       </div>
     </div>
   </div>
 
-  <!-- 🪙 Affiliate Info -->
   <div class="affiliate-info">
     @knowledgeb05d-21 • 🇮🇳 Amazon India Affiliate
   </div>
 
   <footer>© 2025 Amazon Finds by Yaduraj • As an Amazon Associate I earn from qualifying purchases.</footer>
 
-  <!-- 🔍 JavaScript for Search -->
   <script>
     const searchBar = document.getElementById('searchBar');
     const cards = document.querySelectorAll('.card');
